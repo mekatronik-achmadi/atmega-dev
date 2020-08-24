@@ -1,0 +1,12 @@
+<circuit speed="1000000" type="simulide_0.1" reactStep="50" noLinStep="10" noLinAcc="5" animate="85">
+ 
+atmega16-1: 
+<item valLabelx="0" labelrot="0" x="-492" Ser_Port="true" itemtype="AVR" Program="" Ser_Monitor="true" labely="-20" valLabely="0" objectName="atmega16-1" labelx="0" Mhz="16" rotation="0" valLabRot="0" Show_id="true" hflip="1" vflip="1" y="-308" id="atmega16-1"/>
+ 
+PlotterWidget: 
+<item sizePolicy="" palette="" maximumSize="" maximumHeight="200" focus="false" MinVolt="-500" windowModality="0" childrenRegion="" rect="" font="DejaVu Sans,9,-1,5,50,0,0,0,0,0" windowOpacity="1" windowTitle="" toolTip="" x="0" accessibleName="" visible="false" minimumWidth="200" tabletTracking="false" sizeIncrement="" enabled="true" fullScreen="false" whatsThis="" updatesEnabled="true" styleSheet="" accessibleDescription="" autoFillBackground="false" maximized="false" windowModified="false" windowFilePath="" inputMethodHints="0" width="200" geometry="" pos="" modal="false" maximumWidth="1000" locale="" frameGeometry="" sizeHint="" mouseTracking="false" layoutDirection="0" cursor="" MaxVolt="500" objectName="PlotterWidget" frameSize="" baseSize="" windowIconText="" focusPolicy="0" minimumSizeHint="" windowIcon="" y="0" contextMenuPolicy="1" isActiveWindow="true" toolTipDuration="-1" size="" normalGeometry="" childrenRect="" statusTip="" minimumHeight="200" minimized="false" height="200" minimumSize="" acceptDrops="false" itemtype="Plotter"/>
+ 
+SerialPortWidget: 
+<item sizePolicy="" palette="" maximumSize="" maximumHeight="170" focus="false" windowModality="0" childrenRegion="" rect="" font="DejaVu Sans,9,-1,5,50,0,0,0,0,0" windowOpacity="1" windowTitle="Settings" toolTip="" x="641" accessibleName="" visible="true" minimumWidth="0" tabletTracking="false" sizeIncrement="" enabled="true" fullScreen="false" whatsThis="" updatesEnabled="true" styleSheet="" accessibleDescription="" autoFillBackground="false" maximized="false" windowModified="false" windowFilePath="" inputMethodHints="0" width="354" geometry="" pos="" SettingsProp=",0,3,0,0,0" modal="false" maximumWidth="450" locale="" frameGeometry="" sizeHint="" mouseTracking="false" layoutDirection="0" cursor="" objectName="SerialPortWidget" frameSize="" baseSize="" windowIconText="" focusPolicy="0" minimumSizeHint="" windowIcon="" y="535" contextMenuPolicy="1" isActiveWindow="true" toolTipDuration="-1" size="" normalGeometry="" childrenRect="" statusTip="" minimumHeight="0" minimized="false" height="170" minimumSize="" acceptDrops="false" itemtype="SerialPort"/>
+ 
+</circuit>

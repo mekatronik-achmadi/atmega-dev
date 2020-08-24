@@ -1,0 +1,19 @@
+pkgname=qtcreator-arduino
+pkgver=0.1
+pkgrel=1
+pkgdesc="QtCreator IDE wizard addons for Arduino"
+arch=('any')
+url="https://github.com/mekatronik-achmadi/atmega-dev"
+license=('GPL')
+depends=('qtcreator' 'arduino-mk' 'avrdude')
+makedepends=('git')
+options=('!makeflags')
+
+package() {
+	cd "$srcdir/"
+
+	install -d $pkgdir/usr/share/qtcreator/templates/wizards
+	cp -rf ../arduino_c_style $pkgdir/usr/share/qtcreator/templates/wizards
+	cp -rf ../arduino_cpp_style $pkgdir/usr/share/qtcreator/templates/wizards
+	cp -rf ../arduino_sketch_style $pkgdir/usr/share/qtcreator/templates/wizards
+}

@@ -1,0 +1,36 @@
+<circuit type="simulide_0.1" reactStep="50" noLinAcc="5" animate="1" noLinStep="10" speed="1000000">
+ 
+atmega16-2: 
+<item labely="-20" valLabelx="0" valLabRot="0" rotation="0" vflip="1" y="-340" Mhz="16" hflip="1" Ser_Port="false" labelx="0" Show_id="true" Program="" x="-300" valLabely="0" Ser_Monitor="false" objectName="atmega16-2" itemtype="AVR" id="atmega16-2" labelrot="0"/>
+ 
+Hd44780-1: 
+<item labely="-82" x="-524" itemtype="Hd44780" Rows="2" Show_id="true" vflip="1" valLabRot="0" rotation="0" valLabelx="0" objectName="Hd44780-1" id="Hd44780-1" labelx="70" labelrot="0" y="-364" valLabely="0" Cols="16" hflip="1"/>
+ 
+Connector-3: 
+<item labely="-24" valLabelx="0" valLabRot="0" rotation="0" enodeid="Circ_eNode-4" vflip="1" y="-228" hflip="1" pointList="-308,-228,-508,-228,-508,-356" endpinid="Hd44780-1-PinRS" labelx="-16" Show_id="false" x="-308" valLabely="0" startpinid="atmega16-2-PD0" objectName="Connector-3" itemtype="Connector" id="Connector-3" labelrot="0"/>
+ 
+Connector-5: 
+<item labely="-24" valLabelx="0" valLabRot="0" rotation="0" enodeid="Circ_eNode-6" vflip="1" y="-220" hflip="1" pointList="-308,-220,-500,-220,-500,-356" endpinid="Hd44780-1-PinRW" labelx="-16" Show_id="false" x="-308" valLabely="0" startpinid="atmega16-2-PD1" objectName="Connector-5" itemtype="Connector" id="Connector-5" labelrot="0"/>
+ 
+Connector-7: 
+<item labely="-24" valLabelx="0" valLabRot="0" rotation="0" enodeid="Circ_eNode-8" vflip="1" y="-212" hflip="1" pointList="-308,-212,-492,-212,-492,-356" endpinid="Hd44780-1-PinEn" labelx="-16" Show_id="false" x="-308" valLabely="0" startpinid="atmega16-2-PD2" objectName="Connector-7" itemtype="Connector" id="Connector-7" labelrot="0"/>
+ 
+Connector-11: 
+<item labely="-24" valLabelx="0" valLabRot="0" rotation="0" enodeid="enode-11" vflip="1" y="-196" hflip="1" pointList="-308,-196,-452,-196,-452,-356" endpinid="Hd44780-1-dataPin4" labelx="-16" Show_id="false" x="-308" valLabely="0" startpinid="atmega16-2-PD4" objectName="Connector-11" itemtype="Connector" id="Connector-11" labelrot="0"/>
+ 
+Connector-12: 
+<item labely="-24" valLabelx="0" valLabRot="0" rotation="0" enodeid="enode-12" vflip="1" y="-188" hflip="1" pointList="-308,-188,-444,-188,-444,-356" endpinid="Hd44780-1-dataPin5" labelx="-16" Show_id="false" x="-308" valLabely="0" startpinid="atmega16-2-PD5" objectName="Connector-12" itemtype="Connector" id="Connector-12" labelrot="0"/>
+ 
+Connector-13: 
+<item labely="-24" valLabelx="0" valLabRot="0" rotation="0" enodeid="enode-13" vflip="1" y="-180" hflip="1" pointList="-308,-180,-436,-180,-436,-356" endpinid="Hd44780-1-dataPin6" labelx="-16" Show_id="false" x="-308" valLabely="0" startpinid="atmega16-2-PD6" objectName="Connector-13" itemtype="Connector" id="Connector-13" labelrot="0"/>
+ 
+Connector-14: 
+<item labely="-24" valLabelx="0" valLabRot="0" rotation="0" enodeid="enode-14" vflip="1" y="-180" hflip="1" pointList="-244,-180,-244,-164,-428,-164,-428,-356" endpinid="Hd44780-1-dataPin7" labelx="-16" Show_id="false" x="-244" valLabely="0" startpinid="atmega16-2-PD7" objectName="Connector-14" itemtype="Connector" id="Connector-14" labelrot="0"/>
+ 
+PlotterWidget-9: 
+<item rect="" minimumSizeHint="" styleSheet="" windowModality="0" locale="" frameGeometry="" minimized="false" windowIconText="" mouseTracking="false" height="200" inputMethodHints="0" baseSize="" minimumHeight="200" sizeHint="" windowFilePath="" frameSize="" autoFillBackground="false" focusPolicy="0" sizePolicy="" maximumHeight="200" toolTip="" minimumSize="" layoutDirection="0" accessibleDescription="" windowTitle="" tabletTracking="false" y="0" whatsThis="" childrenRegion="" focus="false" contextMenuPolicy="1" width="200" windowIcon="" palette="" updatesEnabled="true" statusTip="" MinVolt="-500" objectName="PlotterWidget-9" maximumWidth="1000" size="" windowOpacity="1" childrenRect="" windowModified="false" maximized="false" enabled="true" minimumWidth="200" acceptDrops="false" fullScreen="false" pos="" normalGeometry="" isActiveWindow="true" MaxVolt="500" visible="false" maximumSize="" sizeIncrement="" toolTipDuration="-1" accessibleName="" font="DejaVu Sans,9,-1,5,50,0,0,0,0,0" cursor="" x="0" itemtype="Plotter" modal="false" geometry=""/>
+ 
+SerialPortWidget-10: 
+<item rect="" minimumSizeHint="" styleSheet="" windowModality="0" locale="" frameGeometry="" minimized="false" windowIconText="" mouseTracking="false" height="141" inputMethodHints="0" baseSize="" minimumHeight="0" sizeHint="" windowFilePath="" frameSize="" autoFillBackground="false" focusPolicy="0" sizePolicy="" maximumHeight="170" toolTip="" minimumSize="" layoutDirection="0" accessibleDescription="" windowTitle="Settings" tabletTracking="false" y="0" whatsThis="" childrenRegion="" focus="false" contextMenuPolicy="1" width="313" SettingsProp=",0,3,0,0,0" windowIcon="" palette="" updatesEnabled="true" statusTip="" objectName="SerialPortWidget-10" maximumWidth="450" size="" windowOpacity="1" childrenRect="" windowModified="false" maximized="false" enabled="true" minimumWidth="0" acceptDrops="false" fullScreen="false" pos="" normalGeometry="" isActiveWindow="true" visible="false" maximumSize="" sizeIncrement="" toolTipDuration="-1" accessibleName="" font="DejaVu Sans,9,-1,5,50,0,0,0,0,0" cursor="" x="0" itemtype="SerialPort" modal="false" geometry=""/>
+ 
+</circuit>

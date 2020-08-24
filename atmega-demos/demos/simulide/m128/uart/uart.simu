@@ -1,0 +1,12 @@
+<circuit reactStep="50" animate="0" speed="1000000" noLinStep="10" noLinAcc="5" type="simulide_0.1">
+ 
+atmega128-1: 
+<item rotation="0" y="-348" Ser_Monitor="true" objectName="atmega128-1" valLabelx="0" labelx="0" Show_id="true" x="-204" hflip="1" Ser_Port="true" vflip="1" Program="" itemtype="AVR" id="atmega128-1" labelrot="0" valLabRot="0" labely="-20" Mhz="8" valLabely="0"/>
+ 
+PlotterWidget: 
+<item minimumSize="" objectName="PlotterWidget" minimumHeight="200" contextMenuPolicy="1" minimized="false" windowModified="false" styleSheet="" windowOpacity="1" acceptDrops="false" palette="" windowIcon="" visible="false" childrenRegion="" normalGeometry="" minimumSizeHint="" enabled="true" focusPolicy="0" autoFillBackground="false" size="" isActiveWindow="true" accessibleName="" maximumWidth="1000" statusTip="" pos="" x="0" tabletTracking="false" accessibleDescription="" layoutDirection="0" whatsThis="" baseSize="" windowTitle="" modal="false" y="0" cursor="" MaxVolt="500" maximumHeight="200" maximumSize="" maximized="false" windowFilePath="" font="DejaVu Sans,9,-1,5,50,0,0,0,0,0" geometry="" sizePolicy="" rect="" childrenRect="" toolTip="" fullScreen="false" toolTipDuration="-1" itemtype="Plotter" windowModality="0" mouseTracking="false" locale="" sizeIncrement="" inputMethodHints="0" sizeHint="" MinVolt="-500" minimumWidth="200" height="200" updatesEnabled="true" windowIconText="" frameSize="" frameGeometry="" width="200" focus="false"/>
+ 
+SerialPortWidget: 
+<item minimumSize="" objectName="SerialPortWidget" minimumHeight="0" contextMenuPolicy="1" minimized="false" windowModified="false" styleSheet="" windowOpacity="1" acceptDrops="false" palette="" windowIcon="" visible="true" childrenRegion="" normalGeometry="" minimumSizeHint="" enabled="true" focusPolicy="0" autoFillBackground="false" SettingsProp=",0,3,0,0,0" size="" isActiveWindow="true" accessibleName="" maximumWidth="450" statusTip="" pos="" x="643" tabletTracking="false" accessibleDescription="" layoutDirection="0" whatsThis="" baseSize="" windowTitle="Settings" modal="false" y="536" cursor="" maximumHeight="170" maximumSize="" maximized="false" windowFilePath="" font="DejaVu Sans,9,-1,5,50,0,0,0,0,0" geometry="" sizePolicy="" rect="" childrenRect="" toolTip="" fullScreen="false" toolTipDuration="-1" itemtype="SerialPort" windowModality="0" mouseTracking="false" locale="" sizeIncrement="" inputMethodHints="0" sizeHint="" minimumWidth="0" height="170" updatesEnabled="true" windowIconText="" frameSize="" frameGeometry="" width="352" focus="false"/>
+ 
+</circuit>

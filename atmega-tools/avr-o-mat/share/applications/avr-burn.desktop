@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=2.1.2
+Encoding=UTF-8
+Name=AVR Burn
+Type=Application
+Exec=avr-burn %u
+Icon=avr8-burn-o-mat.png
+Comment=Flash AVR Microcontrollers
+Terminal=false
+Categories=Development;

@@ -1,0 +1,8 @@
+./
+/usr/avr/include
+%ARDUINO_DIR%/hardware/%ARDMK_VENDOR%/avr/cores/arduino
+%ARDUINO_DIR%/hardware/%ARDMK_VENDOR%/avr/libraries/EEPROM/src
+%ARDUINO_DIR%/hardware/%ARDMK_VENDOR%/avr/libraries/HID/src
+%ARDUINO_DIR%/hardware/%ARDMK_VENDOR%/avr/libraries/SoftwareSerial/src
+%ARDUINO_DIR%/hardware/%ARDMK_VENDOR%/avr/libraries/SPI/src
+%ARDUINO_DIR%/hardware/%ARDMK_VENDOR%/avr/libraries/Wire/src

@@ -1,0 +1,40 @@
+pkgname=atmega-tools
+pkgver=0.1
+pkgrel=1
+pkgdesc="Some tools for developing ATMega chips applications"
+arch=('i686' 'x86_64')
+url="https://github.com/mekatronik-achmadi/atmega-dev"
+license=('GPL')
+depends=('java-runtime' 'tk' 'qt5-base' 'qt5-serialport')
+optdepends=(	'avr-gcc: AVR compiler'
+		'avr-libc: AVR C library'
+		'avrdude: AVR Programmer'
+		'atmega-demos: ATMega demos')
+makedepends=('git')
+options=('!makeflags')
+
+build() {
+	cd "$srcdir/"
+
+	cd "../serialterm/qt/"
+	qmake
+	make all
+}
+
+package() {
+	cd "$srcdir/"
+	install -d $pkgdir/usr/bin/
+
+	cd "../serialterm/qt/"
+	install -Dm755 qserialterm $pkgdir/usr/bin/qserialterm
+
+	cd "../../avr-o-mat/"
+	install -d $pkgdir/usr/bin/
+	cp -rf share $pkgdir/usr/
+	install -Dm755 bin/avr-burn $pkgdir/usr/bin/avr-burn
+
+	cd "../atmega-mfile"
+	install -d $pkgdir/usr/{bin,share}/
+	cp -rf mfile $pkgdir/usr/share/
+	install -Dm755 atmega-mfile $pkgdir/usr/bin/atmega-mfile
+}

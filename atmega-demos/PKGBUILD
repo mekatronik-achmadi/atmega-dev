@@ -1,0 +1,24 @@
+pkgname=atmega-demos
+pkgver=0.1
+pkgrel=1
+pkgdesc="Some demos for developing ATMega chips applications"
+arch=('any')
+url="https://github.com/mekatronik-achmadi/atmega-dev"
+license=('GPL')
+depends=('avr-libc' 'avr-gcc' 'avrdude')
+optdepends=('atmega-tools: ATMega additional tools')
+makedepends=('git')
+options=('!makeflags')
+
+package() {
+	cd "$srcdir/"
+
+	install -d $pkgdir/opt/atmega-demos/
+
+	cp -rf ../avr_usbasp $pkgdir/opt/atmega-demos/
+	cp -rf ../template $pkgdir/opt/atmega-demos/
+	cp -rf ../pinout $pkgdir/opt/atmega-demos/
+	cp -rf ../demos $pkgdir/opt/atmega-demos/
+
+	cp -f ../atmega.md $pkgdir/opt/atmega-demos/
+}
