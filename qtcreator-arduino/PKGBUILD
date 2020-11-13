@@ -6,7 +6,7 @@ arch=('any')
 url="https://github.com/mekatronik-achmadi/atmega-dev"
 license=('GPL')
 depends=('qtcreator' 'arduino-mk' 'avrdude')
-optdepends('minicom: serial terminal')
+optdepends=('minicom: serial terminal')
 makedepends=('git')
 options=('!makeflags')
 
