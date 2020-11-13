@@ -209,7 +209,7 @@ leave room for the Qt 4 target page.
         </field>
         <field mandatory="true" name="SERIAL_MONITOR_PROGRAM">
             <fieldcontrol class="QLineEdit" validator='^[^"]+$'
-                          defaulttext="/usr/bin/gtkterm" />
+                          defaulttext="/usr/bin/qserialterm" />
             <fielddescription>Serial monitor program:</fielddescription>
         </field>
         <field mandatory="true" name="SERIAL_MONITOR_PROGRAM_ARG_PORT">
