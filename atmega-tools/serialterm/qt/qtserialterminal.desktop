@@ -4,7 +4,6 @@ GenericName=Qt Serial Terminal
 Comment=A Qt-based serial terminal
 Exec=qserialterm
 Icon=terminal
-Path=
 Type=Application
 Terminal=false
 Categories=Development;
