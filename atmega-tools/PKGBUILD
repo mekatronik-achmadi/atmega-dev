@@ -6,7 +6,7 @@ arch=('i686' 'x86_64')
 url="https://github.com/mekatronik-achmadi/atmega-dev"
 license=('GPL')
 depends=('java-runtime' 'tk' 'qt5-base' 'qt5-serialport')
-optdepends=(	'avr-gcc: AVR compiler'
+optdepends=('avr-gcc: AVR compiler'
 		'avr-libc: AVR C library'
 		'avrdude: AVR Programmer'
 		'atmega-demos: ATMega demos')
@@ -24,9 +24,12 @@ build() {
 package() {
 	cd "$srcdir/"
 	install -d $pkgdir/usr/bin/
+	install -d $pkgdir/usr/share/applications/
 
 	cd "../serialterm/qt/"
 	install -Dm755 qserialterm $pkgdir/usr/bin/qserialterm
+	install -Dm644 qtserialterminal.desktop \
+	$pkgdir/usr/share/applications/qtserialterminal.desktop
 
 	cd "../../avr-o-mat/"
 	install -d $pkgdir/usr/bin/

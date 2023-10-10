@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=QtSerialTerminal
+MimeType=
+GenericName=Qt Serial Terminal
+Comment=A Qt-based serial terminal
+Exec=qtserialterm
+Icon=terminal
+Path=
+Type=Application
+Terminal=0
+Categories=Development;
