@@ -18,6 +18,6 @@ package() {
 	cp -rf ../template $pkgdir/opt/atmega-demos/
 
 	install -d $pkgdir/opt/atmega-demos/demos/
-	cp -rf ../demos/migrated $pkgdir/opt/atmega-demos/
 	cp -rf ../demos/simulide $pkgdir/opt/atmega-demos/
+	cp -rf ../demos/untested $pkgdir/opt/atmega-demos/
 }
