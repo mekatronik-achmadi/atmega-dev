@@ -1022,6 +1022,10 @@
     (stroke (width 0) (type default))
     (uuid 8df634c9-248c-41b0-b945-be7bbc1683c6)
   )
+  (wire (pts (xy 100.33 24.13) (xy 111.76 24.13))
+    (stroke (width 0) (type default))
+    (uuid 97505ccd-221c-4577-b60e-bfdf7ad761f4)
+  )
   (wire (pts (xy 76.2 43.18) (xy 76.2 45.72))
     (stroke (width 0) (type default))
     (uuid 98da3fcc-7fd1-490c-ab19-82cd2a05fd91)
@@ -1383,7 +1387,7 @@
   (symbol (lib_id "power:GND") (at 45.72 58.42 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 1c1df7a7-b4c6-4672-97b7-c849d400984e)
-    (property "Reference" "#PWR011" (at 45.72 64.77 0)
+    (property "Reference" "#PWR012" (at 45.72 64.77 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 45.72 62.23 90)
@@ -1399,7 +1403,7 @@
     (instances
       (project "usbasploader"
         (path "/909d4d67-d92f-424c-bd51-265094cc6519"
-          (reference "#PWR011") (unit 1)
+          (reference "#PWR012") (unit 1)
         )
       )
     )
@@ -1408,7 +1412,7 @@
   (symbol (lib_id "power:GND") (at 68.58 88.9 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 1c7c9ed1-e4e6-4b32-a258-ac2e42dfbeb8)
-    (property "Reference" "#PWR018" (at 68.58 95.25 0)
+    (property "Reference" "#PWR019" (at 68.58 95.25 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 68.58 92.71 90)
@@ -1424,7 +1428,7 @@
     (instances
       (project "usbasploader"
         (path "/909d4d67-d92f-424c-bd51-265094cc6519"
-          (reference "#PWR018") (unit 1)
+          (reference "#PWR019") (unit 1)
         )
       )
     )
@@ -1433,7 +1437,7 @@
   (symbol (lib_id "power:GND") (at 146.05 78.74 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 23b6eba6-9564-4367-9b03-3dfac8e58ed1)
-    (property "Reference" "#PWR017" (at 146.05 85.09 0)
+    (property "Reference" "#PWR018" (at 146.05 85.09 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 146.05 83.82 0)
@@ -1449,7 +1453,7 @@
     (instances
       (project "usbasploader"
         (path "/909d4d67-d92f-424c-bd51-265094cc6519"
-          (reference "#PWR017") (unit 1)
+          (reference "#PWR018") (unit 1)
         )
       )
     )
@@ -1514,7 +1518,7 @@
   (symbol (lib_id "power:GND") (at 146.05 36.83 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 415de54e-877b-407e-bdae-d04223615666)
-    (property "Reference" "#PWR03" (at 152.4 36.83 0)
+    (property "Reference" "#PWR04" (at 152.4 36.83 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 151.13 36.83 0)
@@ -1530,7 +1534,7 @@
     (instances
       (project "usbasploader"
         (path "/909d4d67-d92f-424c-bd51-265094cc6519"
-          (reference "#PWR03") (unit 1)
+          (reference "#PWR04") (unit 1)
         )
       )
     )
@@ -1565,7 +1569,7 @@
   (symbol (lib_id "power:VCC") (at 139.7 59.69 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 42d56b40-78e1-41c3-8c08-3b4dbecffe28)
-    (property "Reference" "#PWR012" (at 139.7 63.5 0)
+    (property "Reference" "#PWR013" (at 139.7 63.5 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "VCC" (at 139.7 54.61 0)
@@ -1581,7 +1585,7 @@
     (instances
       (project "usbasploader"
         (path "/909d4d67-d92f-424c-bd51-265094cc6519"
-          (reference "#PWR012") (unit 1)
+          (reference "#PWR013") (unit 1)
         )
       )
     )
@@ -1590,7 +1594,7 @@
   (symbol (lib_id "power:VCC") (at 58.42 73.66 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 44300cab-cde9-4d59-89b9-9cd03092ed5d)
-    (property "Reference" "#PWR014" (at 62.23 73.66 0)
+    (property "Reference" "#PWR015" (at 62.23 73.66 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "VCC" (at 54.61 73.66 90)
@@ -1606,7 +1610,32 @@
     (instances
       (project "usbasploader"
         (path "/909d4d67-d92f-424c-bd51-265094cc6519"
-          (reference "#PWR014") (unit 1)
+          (reference "#PWR015") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:GND") (at 92.71 24.13 270) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 46598e69-5601-4690-a7b9-fa4a7ee8de75)
+    (property "Reference" "#PWR01" (at 86.36 24.13 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "GND" (at 87.63 24.13 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Footprint" "" (at 92.71 24.13 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 92.71 24.13 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 3e4e705d-e37a-4441-83dc-b1f6b90039a3))
+    (instances
+      (project "usbasploader"
+        (path "/909d4d67-d92f-424c-bd51-265094cc6519"
+          (reference "#PWR01") (unit 1)
         )
       )
     )
@@ -1615,7 +1644,7 @@
   (symbol (lib_id "power:VCC") (at 66.04 43.18 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 50278aba-273f-494d-956c-ddabde216944)
-    (property "Reference" "#PWR06" (at 66.04 46.99 0)
+    (property "Reference" "#PWR07" (at 66.04 46.99 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "VCC" (at 66.04 38.1 0)
@@ -1631,7 +1660,7 @@
     (instances
       (project "usbasploader"
         (path "/909d4d67-d92f-424c-bd51-265094cc6519"
-          (reference "#PWR06") (unit 1)
+          (reference "#PWR07") (unit 1)
         )
       )
     )
@@ -1666,7 +1695,7 @@
   (symbol (lib_id "power:GND") (at 76.2 88.9 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 59d91563-35a8-482d-afe0-7283d5fa364b)
-    (property "Reference" "#PWR019" (at 76.2 95.25 0)
+    (property "Reference" "#PWR020" (at 76.2 95.25 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 76.2 92.71 90)
@@ -1682,7 +1711,7 @@
     (instances
       (project "usbasploader"
         (path "/909d4d67-d92f-424c-bd51-265094cc6519"
-          (reference "#PWR019") (unit 1)
+          (reference "#PWR020") (unit 1)
         )
       )
     )
@@ -1717,7 +1746,7 @@
   (symbol (lib_id "power:VCC") (at 86.36 77.47 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 63d80b50-9107-48ae-aa90-4b90d74ce688)
-    (property "Reference" "#PWR015" (at 86.36 81.28 0)
+    (property "Reference" "#PWR016" (at 86.36 81.28 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "VCC" (at 86.36 72.39 0)
@@ -1733,7 +1762,7 @@
     (instances
       (project "usbasploader"
         (path "/909d4d67-d92f-424c-bd51-265094cc6519"
-          (reference "#PWR015") (unit 1)
+          (reference "#PWR016") (unit 1)
         )
       )
     )
@@ -1742,7 +1771,7 @@
   (symbol (lib_id "power:VCC") (at 96.52 46.99 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 6b9adecd-8f28-447e-9c2e-18f68fba2980)
-    (property "Reference" "#PWR08" (at 100.33 46.99 0)
+    (property "Reference" "#PWR09" (at 100.33 46.99 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "VCC" (at 92.71 46.99 90)
@@ -1758,7 +1787,7 @@
     (instances
       (project "usbasploader"
         (path "/909d4d67-d92f-424c-bd51-265094cc6519"
-          (reference "#PWR08") (unit 1)
+          (reference "#PWR09") (unit 1)
         )
       )
     )
@@ -1875,7 +1904,7 @@
   (symbol (lib_id "Device:C") (at 80.01 35.56 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 974a66d5-ebd7-4cbb-945e-634ebe93b417)
-    (property "Reference" "C1" (at 80.01 31.75 90)
+    (property "Reference" "C2" (at 80.01 31.75 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "22pF" (at 83.82 34.29 90)
@@ -1892,7 +1921,7 @@
     (instances
       (project "usbasploader"
         (path "/909d4d67-d92f-424c-bd51-265094cc6519"
-          (reference "C1") (unit 1)
+          (reference "C2") (unit 1)
         )
       )
     )
@@ -1979,7 +2008,7 @@
   (symbol (lib_id "power:VCC") (at 111.76 24.13 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid b1fc1bae-ea44-4e8a-bffb-be911ac4201a)
-    (property "Reference" "#PWR01" (at 111.76 27.94 0)
+    (property "Reference" "#PWR02" (at 111.76 27.94 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "VCC" (at 111.76 19.05 0)
@@ -1995,7 +2024,7 @@
     (instances
       (project "usbasploader"
         (path "/909d4d67-d92f-424c-bd51-265094cc6519"
-          (reference "#PWR01") (unit 1)
+          (reference "#PWR02") (unit 1)
         )
       )
     )
@@ -2004,7 +2033,7 @@
   (symbol (lib_id "power:VCC") (at 86.36 57.15 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid c3335919-76e0-4c96-ba54-c0531b70e9ab)
-    (property "Reference" "#PWR010" (at 86.36 60.96 0)
+    (property "Reference" "#PWR011" (at 86.36 60.96 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "VCC" (at 86.36 52.07 0)
@@ -2020,7 +2049,7 @@
     (instances
       (project "usbasploader"
         (path "/909d4d67-d92f-424c-bd51-265094cc6519"
-          (reference "#PWR010") (unit 1)
+          (reference "#PWR011") (unit 1)
         )
       )
     )
@@ -2029,7 +2058,7 @@
   (symbol (lib_id "power:GND") (at 76.2 45.72 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid c5ba8880-93b8-4094-9e02-001e753eb657)
-    (property "Reference" "#PWR07" (at 76.2 52.07 0)
+    (property "Reference" "#PWR08" (at 76.2 52.07 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 76.2 50.8 0)
@@ -2045,7 +2074,7 @@
     (instances
       (project "usbasploader"
         (path "/909d4d67-d92f-424c-bd51-265094cc6519"
-          (reference "#PWR07") (unit 1)
+          (reference "#PWR08") (unit 1)
         )
       )
     )
@@ -2054,7 +2083,7 @@
   (symbol (lib_id "power:VCC") (at 45.72 43.18 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid c65be0b2-87e1-4f14-8bc9-62ed3630f28f)
-    (property "Reference" "#PWR04" (at 45.72 46.99 0)
+    (property "Reference" "#PWR05" (at 45.72 46.99 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "VCC" (at 45.72 38.1 0)
@@ -2070,7 +2099,33 @@
     (instances
       (project "usbasploader"
         (path "/909d4d67-d92f-424c-bd51-265094cc6519"
-          (reference "#PWR04") (unit 1)
+          (reference "#PWR05") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Device:C") (at 96.52 24.13 90) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid c846ca48-9f32-42f3-8455-03c915709fab)
+    (property "Reference" "C1" (at 96.52 17.78 90)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "100n" (at 96.52 20.32 90)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" (at 100.33 23.1648 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 96.52 24.13 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 49f2f85d-11b3-435a-a9bf-7393cf560079))
+    (pin "2" (uuid 1032f379-7b58-4a46-bf57-e72f31f16a4e))
+    (instances
+      (project "usbasploader"
+        (path "/909d4d67-d92f-424c-bd51-265094cc6519"
+          (reference "C1") (unit 1)
         )
       )
     )
@@ -2079,7 +2134,7 @@
   (symbol (lib_id "power:VCC") (at 146.05 34.29 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid cc3734ee-9d34-496d-a5b6-601bdb1c2f62)
-    (property "Reference" "#PWR02" (at 142.24 34.29 0)
+    (property "Reference" "#PWR03" (at 142.24 34.29 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "VCC" (at 149.86 34.29 90)
@@ -2095,7 +2150,7 @@
     (instances
       (project "usbasploader"
         (path "/909d4d67-d92f-424c-bd51-265094cc6519"
-          (reference "#PWR02") (unit 1)
+          (reference "#PWR03") (unit 1)
         )
       )
     )
@@ -2104,7 +2159,7 @@
   (symbol (lib_id "power:GND") (at 76.2 67.31 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid d396ba4a-f0f4-446a-b2ff-7613d9f802e9)
-    (property "Reference" "#PWR013" (at 76.2 73.66 0)
+    (property "Reference" "#PWR014" (at 76.2 73.66 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 76.2 71.12 90)
@@ -2120,7 +2175,7 @@
     (instances
       (project "usbasploader"
         (path "/909d4d67-d92f-424c-bd51-265094cc6519"
-          (reference "#PWR013") (unit 1)
+          (reference "#PWR014") (unit 1)
         )
       )
     )
@@ -2129,7 +2184,7 @@
   (symbol (lib_id "power:GND") (at 127 54.61 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid e2d0668e-3048-497d-a7a4-d198ff6399bd)
-    (property "Reference" "#PWR09" (at 133.35 54.61 0)
+    (property "Reference" "#PWR010" (at 133.35 54.61 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 132.08 54.61 0)
@@ -2145,7 +2200,7 @@
     (instances
       (project "usbasploader"
         (path "/909d4d67-d92f-424c-bd51-265094cc6519"
-          (reference "#PWR09") (unit 1)
+          (reference "#PWR010") (unit 1)
         )
       )
     )
@@ -2154,7 +2209,7 @@
   (symbol (lib_id "Device:C") (at 80.01 43.18 90) (mirror x) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid eb2f6d6a-d402-46cd-85b2-3d7628500477)
-    (property "Reference" "C2" (at 80.01 46.99 90)
+    (property "Reference" "C3" (at 80.01 46.99 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "22pF" (at 83.82 44.45 90)
@@ -2171,7 +2226,7 @@
     (instances
       (project "usbasploader"
         (path "/909d4d67-d92f-424c-bd51-265094cc6519"
-          (reference "C2") (unit 1)
+          (reference "C3") (unit 1)
         )
       )
     )
@@ -2180,7 +2235,7 @@
   (symbol (lib_id "power:GND") (at 142.24 78.74 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid ed45d6bc-f903-4e18-868a-62d3798f0a1d)
-    (property "Reference" "#PWR016" (at 142.24 85.09 0)
+    (property "Reference" "#PWR017" (at 142.24 85.09 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 142.24 83.82 0)
@@ -2196,7 +2251,7 @@
     (instances
       (project "usbasploader"
         (path "/909d4d67-d92f-424c-bd51-265094cc6519"
-          (reference "#PWR016") (unit 1)
+          (reference "#PWR017") (unit 1)
         )
       )
     )
@@ -2231,7 +2286,7 @@
   (symbol (lib_id "power:VCC") (at 55.88 43.18 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid f2d19df3-4fd7-4e63-a3e3-54e1bab8932a)
-    (property "Reference" "#PWR05" (at 55.88 46.99 0)
+    (property "Reference" "#PWR06" (at 55.88 46.99 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "VCC" (at 55.88 38.1 0)
@@ -2247,7 +2302,7 @@
     (instances
       (project "usbasploader"
         (path "/909d4d67-d92f-424c-bd51-265094cc6519"
-          (reference "#PWR05") (unit 1)
+          (reference "#PWR06") (unit 1)
         )
       )
     )
@@ -2256,7 +2311,7 @@
   (symbol (lib_id "power:GND") (at 111.76 95.25 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid f5a47ce5-96fa-43cd-a8fe-5da11684ff49)
-    (property "Reference" "#PWR020" (at 111.76 101.6 0)
+    (property "Reference" "#PWR021" (at 111.76 101.6 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 111.76 100.33 0)
@@ -2272,7 +2327,7 @@
     (instances
       (project "usbasploader"
         (path "/909d4d67-d92f-424c-bd51-265094cc6519"
-          (reference "#PWR020") (unit 1)
+          (reference "#PWR021") (unit 1)
         )
       )
     )
