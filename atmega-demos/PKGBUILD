@@ -14,11 +14,10 @@ package() {
 	cd "$srcdir/"
 
 	install -d $pkgdir/opt/atmega-demos/
-
 	cp -rf ../avr_usbasp $pkgdir/opt/atmega-demos/
 	cp -rf ../template $pkgdir/opt/atmega-demos/
-	cp -rf ../pinout $pkgdir/opt/atmega-demos/
-	cp -rf ../demos $pkgdir/opt/atmega-demos/
 
-	cp -f ../atmega.md $pkgdir/opt/atmega-demos/
+	install -d $pkgdir/opt/atmega-demos/demos/
+	cp -rf ../demos/migrated $pkgdir/opt/atmega-demos/
+	cp -rf ../demos/simulide $pkgdir/opt/atmega-demos/
 }
