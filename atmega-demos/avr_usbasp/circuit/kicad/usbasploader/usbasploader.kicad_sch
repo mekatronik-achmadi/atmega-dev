@@ -909,7 +909,7 @@
   (junction (at 127 69.85) (diameter 0) (color 0 0 0 0)
     (uuid 44ef5ada-51d5-4439-a44c-40a00d9f505d)
   )
-  (junction (at 143.51 67.31) (diameter 0) (color 0 0 0 0)
+  (junction (at 146.05 67.31) (diameter 0) (color 0 0 0 0)
     (uuid 51c8c0ca-8873-4b26-a0b1-12b768885c40)
   )
   (junction (at 111.76 24.13) (diameter 0) (color 0 0 0 0)
@@ -918,7 +918,7 @@
   (junction (at 86.36 87.63) (diameter 0) (color 0 0 0 0)
     (uuid 95e6131f-5049-40da-bb0d-6e33d5882785)
   )
-  (junction (at 139.7 67.31) (diameter 0) (color 0 0 0 0)
+  (junction (at 142.24 67.31) (diameter 0) (color 0 0 0 0)
     (uuid 9fb731a8-1686-4ecd-b1df-60a06c836b4e)
   )
   (junction (at 68.58 88.9) (diameter 0) (color 0 0 0 0)
@@ -933,7 +933,7 @@
   (junction (at 86.36 35.56) (diameter 0) (color 0 0 0 0)
     (uuid e63ba0d4-0ce7-4210-84be-42bff974f1a6)
   )
-  (junction (at 139.7 69.85) (diameter 0) (color 0 0 0 0)
+  (junction (at 142.24 69.85) (diameter 0) (color 0 0 0 0)
     (uuid efc19661-9716-444a-9eae-a2301092878a)
   )
 
@@ -982,27 +982,35 @@
     (stroke (width 0) (type default))
     (uuid 3089a610-08ad-4cd4-9578-0cafb390015c)
   )
-  (wire (pts (xy 139.7 69.85) (xy 139.7 71.12))
+  (wire (pts (xy 142.24 69.85) (xy 142.24 71.12))
     (stroke (width 0) (type default))
     (uuid 3de2dc00-d310-4d6a-b378-fa9f0ddf70f6)
   )
-  (wire (pts (xy 127 67.31) (xy 130.81 67.31))
+  (wire (pts (xy 127 67.31) (xy 133.35 67.31))
     (stroke (width 0) (type default))
     (uuid 48d81077-2cca-4290-b6d8-64ad234799c4)
   )
-  (wire (pts (xy 138.43 69.85) (xy 139.7 69.85))
+  (wire (pts (xy 140.97 69.85) (xy 142.24 69.85))
     (stroke (width 0) (type default))
     (uuid 51b4e633-e488-4302-9968-a32c6e36b82c)
+  )
+  (wire (pts (xy 142.24 59.69) (xy 139.7 59.69))
+    (stroke (width 0) (type default))
+    (uuid 566b470f-94c1-46fc-947a-3c9043215c9c)
   )
   (wire (pts (xy 86.36 35.56) (xy 95.25 35.56))
     (stroke (width 0) (type default))
     (uuid 63792643-ac71-4299-a1ee-24a881a291b5)
   )
-  (wire (pts (xy 139.7 69.85) (xy 146.05 69.85))
+  (wire (pts (xy 142.24 69.85) (xy 148.59 69.85))
     (stroke (width 0) (type default))
     (uuid 73662cb6-afe5-4147-ae87-1452c0564142)
   )
-  (wire (pts (xy 138.43 67.31) (xy 139.7 67.31))
+  (wire (pts (xy 128.27 74.93) (xy 127 74.93))
+    (stroke (width 0) (type default))
+    (uuid 807d4b1f-9660-41dc-9937-7a826503c900)
+  )
+  (wire (pts (xy 140.97 67.31) (xy 142.24 67.31))
     (stroke (width 0) (type default))
     (uuid 8a92aadc-6088-47eb-b548-919b664a7160)
   )
@@ -1026,7 +1034,7 @@
     (stroke (width 0) (type default))
     (uuid b086031c-d8bd-4a38-a3e4-3f57483a374f)
   )
-  (wire (pts (xy 139.7 67.31) (xy 143.51 67.31))
+  (wire (pts (xy 142.24 67.31) (xy 146.05 67.31))
     (stroke (width 0) (type default))
     (uuid b1baebef-b6b8-46a2-96be-6fe024917ec5)
   )
@@ -1058,23 +1066,23 @@
     (stroke (width 0) (type default))
     (uuid f3e04142-42a3-45f1-b122-dfcdcc8c5c0f)
   )
-  (wire (pts (xy 143.51 67.31) (xy 143.51 71.12))
+  (wire (pts (xy 146.05 67.31) (xy 146.05 71.12))
     (stroke (width 0) (type default))
     (uuid f6deee05-aad2-4b38-b534-41e1a9696e5d)
   )
-  (wire (pts (xy 143.51 67.31) (xy 146.05 67.31))
+  (wire (pts (xy 146.05 67.31) (xy 148.59 67.31))
     (stroke (width 0) (type default))
     (uuid f90b633a-2223-4f63-9375-7646f6b8eb3f)
   )
-  (wire (pts (xy 127 69.85) (xy 130.81 69.85))
+  (wire (pts (xy 127 69.85) (xy 133.35 69.85))
     (stroke (width 0) (type default))
     (uuid ffa73958-68af-459c-994f-ddadfa39e09c)
   )
 
-  (global_label "USB_DM" (shape input) (at 146.05 67.31 0) (fields_autoplaced)
+  (global_label "USB_DM" (shape input) (at 148.59 67.31 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid 0564ca81-8fd8-4396-99a5-4c5e1a01a9c7)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 156.5342 67.31 0)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 159.0742 67.31 0)
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
   )
@@ -1141,10 +1149,10 @@
       (effects (font (size 1.27 1.27)) (justify right) hide)
     )
   )
-  (global_label "USB_DP" (shape input) (at 146.05 69.85 0) (fields_autoplaced)
+  (global_label "USB_DP" (shape input) (at 148.59 69.85 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid 8cffb06b-fdd3-4994-b787-fdc0024400bb)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 156.3528 69.85 0)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 158.8928 69.85 0)
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
   )
@@ -1169,10 +1177,10 @@
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
   )
-  (global_label "BOOT" (shape input) (at 127 74.93 0) (fields_autoplaced)
+  (global_label "BOOT" (shape input) (at 128.27 74.93 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid b3ea070c-67e3-43fa-a6b4-62692e7b63f4)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 134.8838 74.93 0)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 136.1538 74.93 0)
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
   )
@@ -1212,25 +1220,25 @@
     )
   )
 
-  (symbol (lib_id "Device:R") (at 134.62 69.85 90) (unit 1)
+  (symbol (lib_id "Device:R") (at 137.16 69.85 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 01f2b3c8-ffc3-492b-b203-2d262f323f9e)
-    (property "Reference" "R7" (at 134.62 72.39 90)
+    (property "Reference" "R7" (at 137.16 72.39 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Value" "68" (at 134.62 69.85 90)
+    (property "Value" "68" (at 137.16 69.85 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" (at 134.62 71.628 90)
+    (property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" (at 137.16 71.628 90)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "~" (at 134.62 69.85 0)
+    (property "Datasheet" "~" (at 137.16 69.85 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid dddff88f-b504-49e0-a765-8b72f1ecd4fb))
     (pin "2" (uuid f79ea083-67b8-45a4-a124-aa508181e568))
     (instances
-      (project "v0"
+      (project "usbasploader"
         (path "/909d4d67-d92f-424c-bd51-265094cc6519"
           (reference "R7") (unit 1)
         )
@@ -1256,7 +1264,7 @@
     (pin "1" (uuid d9660292-bf55-4d82-83eb-90afe21d6f2f))
     (pin "2" (uuid 27ea4bd7-682f-4fff-9492-a503f6c2dbc9))
     (instances
-      (project "v0"
+      (project "usbasploader"
         (path "/909d4d67-d92f-424c-bd51-265094cc6519"
           (reference "SW1") (unit 1)
         )
@@ -1282,7 +1290,7 @@
     (pin "1" (uuid 6a0204e0-b62f-4cd4-a467-106312f7ad2f))
     (pin "2" (uuid 85dd6970-22c9-42d3-bea3-7e0227763f59))
     (instances
-      (project "v0"
+      (project "usbasploader"
         (path "/909d4d67-d92f-424c-bd51-265094cc6519"
           (reference "D1") (unit 1)
         )
@@ -1312,7 +1320,7 @@
     (pin "5" (uuid 0b9f7e72-2d46-4351-8a9d-0ff991ae0991))
     (pin "6" (uuid c45c737e-331b-49fc-ae33-693f3be061a7))
     (instances
-      (project "v0"
+      (project "usbasploader"
         (path "/909d4d67-d92f-424c-bd51-265094cc6519"
           (reference "J1") (unit 1)
         )
@@ -1320,25 +1328,25 @@
     )
   )
 
-  (symbol (lib_id "Device:R") (at 134.62 67.31 90) (unit 1)
+  (symbol (lib_id "Device:R") (at 137.16 67.31 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 171a2cb2-c550-4ea9-b66f-55e8fa388ba4)
-    (property "Reference" "R6" (at 134.62 64.77 90)
+    (property "Reference" "R6" (at 137.16 64.77 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Value" "68" (at 134.62 67.31 90)
+    (property "Value" "68" (at 137.16 67.31 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" (at 134.62 69.088 90)
+    (property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" (at 137.16 69.088 90)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "~" (at 134.62 67.31 0)
+    (property "Datasheet" "~" (at 137.16 67.31 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 947579a2-1b17-4aa3-9502-0ef90fb2322b))
     (pin "2" (uuid a9a06062-d918-44ac-97e0-0e72ac0741b0))
     (instances
-      (project "v0"
+      (project "usbasploader"
         (path "/909d4d67-d92f-424c-bd51-265094cc6519"
           (reference "R6") (unit 1)
         )
@@ -1364,7 +1372,7 @@
     (pin "1" (uuid 0688d8d6-6c8d-4616-8edb-28f47a5ba1a2))
     (pin "2" (uuid 82c07d54-9b5b-4e7f-84c5-5f583cd0b3e9))
     (instances
-      (project "v0"
+      (project "usbasploader"
         (path "/909d4d67-d92f-424c-bd51-265094cc6519"
           (reference "D2") (unit 1)
         )
@@ -1389,7 +1397,7 @@
     )
     (pin "1" (uuid b095e482-bbd1-4706-b6c1-5f72920bca85))
     (instances
-      (project "v0"
+      (project "usbasploader"
         (path "/909d4d67-d92f-424c-bd51-265094cc6519"
           (reference "#PWR011") (unit 1)
         )
@@ -1414,7 +1422,7 @@
     )
     (pin "1" (uuid 44c2ea9b-00c2-4a88-ad57-47c5d354fce4))
     (instances
-      (project "v0"
+      (project "usbasploader"
         (path "/909d4d67-d92f-424c-bd51-265094cc6519"
           (reference "#PWR018") (unit 1)
         )
@@ -1422,24 +1430,24 @@
     )
   )
 
-  (symbol (lib_id "power:GND") (at 143.51 78.74 0) (unit 1)
+  (symbol (lib_id "power:GND") (at 146.05 78.74 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 23b6eba6-9564-4367-9b03-3dfac8e58ed1)
-    (property "Reference" "#PWR017" (at 143.51 85.09 0)
+    (property "Reference" "#PWR017" (at 146.05 85.09 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Value" "GND" (at 143.51 83.82 0)
+    (property "Value" "GND" (at 146.05 83.82 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Footprint" "" (at 143.51 78.74 0)
+    (property "Footprint" "" (at 146.05 78.74 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "" (at 143.51 78.74 0)
+    (property "Datasheet" "" (at 146.05 78.74 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 063d8b80-0766-4a22-baaa-46a6558b629c))
     (instances
-      (project "v0"
+      (project "usbasploader"
         (path "/909d4d67-d92f-424c-bd51-265094cc6519"
           (reference "#PWR017") (unit 1)
         )
@@ -1469,7 +1477,7 @@
     (pin "5" (uuid b86ea5c1-aa14-4f4f-a229-ed6277b7d7e1))
     (pin "6" (uuid d151d68e-4643-4bf4-b7b5-72199d9c872c))
     (instances
-      (project "v0"
+      (project "usbasploader"
         (path "/909d4d67-d92f-424c-bd51-265094cc6519"
           (reference "J2") (unit 1)
         )
@@ -1495,7 +1503,7 @@
     (pin "1" (uuid 6fe214a4-3e0b-4bf3-a5bc-08beb6cf4a0a))
     (pin "2" (uuid 619ef7fc-afb4-4844-9307-1d4db24b779f))
     (instances
-      (project "v0"
+      (project "usbasploader"
         (path "/909d4d67-d92f-424c-bd51-265094cc6519"
           (reference "R8") (unit 1)
         )
@@ -1520,7 +1528,7 @@
     )
     (pin "1" (uuid 56104c65-934e-4bec-b06f-a47d044db04b))
     (instances
-      (project "v0"
+      (project "usbasploader"
         (path "/909d4d67-d92f-424c-bd51-265094cc6519"
           (reference "#PWR03") (unit 1)
         )
@@ -1546,7 +1554,7 @@
     (pin "1" (uuid 304bb582-fe36-4108-a292-40cae560e054))
     (pin "2" (uuid 49a0224a-1ada-4a9f-acef-c06e4002d3f4))
     (instances
-      (project "v0"
+      (project "usbasploader"
         (path "/909d4d67-d92f-424c-bd51-265094cc6519"
           (reference "R1") (unit 1)
         )
@@ -1571,7 +1579,7 @@
     )
     (pin "1" (uuid f437b150-cbd0-4fa3-8ee0-a855cd7daa05))
     (instances
-      (project "v0"
+      (project "usbasploader"
         (path "/909d4d67-d92f-424c-bd51-265094cc6519"
           (reference "#PWR012") (unit 1)
         )
@@ -1596,7 +1604,7 @@
     )
     (pin "1" (uuid b8e20798-44a9-4129-be97-7f88b97bcd6d))
     (instances
-      (project "v0"
+      (project "usbasploader"
         (path "/909d4d67-d92f-424c-bd51-265094cc6519"
           (reference "#PWR014") (unit 1)
         )
@@ -1621,7 +1629,7 @@
     )
     (pin "1" (uuid 18f79fa3-e723-4bab-ac14-2a2846523a8e))
     (instances
-      (project "v0"
+      (project "usbasploader"
         (path "/909d4d67-d92f-424c-bd51-265094cc6519"
           (reference "#PWR06") (unit 1)
         )
@@ -1647,7 +1655,7 @@
     (pin "1" (uuid 1b6c6b3d-e1e6-4eec-81ba-8cb4b8ba4404))
     (pin "2" (uuid 998c1e3c-30e4-48a7-8d74-75ffbd067ed9))
     (instances
-      (project "v0"
+      (project "usbasploader"
         (path "/909d4d67-d92f-424c-bd51-265094cc6519"
           (reference "Y1") (unit 1)
         )
@@ -1672,7 +1680,7 @@
     )
     (pin "1" (uuid 2dfd1339-df6d-4ae3-9ca1-54de1faa1755))
     (instances
-      (project "v0"
+      (project "usbasploader"
         (path "/909d4d67-d92f-424c-bd51-265094cc6519"
           (reference "#PWR019") (unit 1)
         )
@@ -1680,25 +1688,25 @@
     )
   )
 
-  (symbol (lib_id "Device:D_Zener") (at 139.7 74.93 270) (unit 1)
+  (symbol (lib_id "Device:D_Zener") (at 142.24 74.93 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 5baa2951-bd93-4d57-af35-74bbb7ddee29)
-    (property "Reference" "D4" (at 135.89 74.93 90)
+    (property "Reference" "D4" (at 138.43 74.93 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "3V3" (at 134.62 77.47 90)
+    (property "Value" "3V6" (at 137.16 77.47 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Diode_SMD:D_SOD-323" (at 139.7 74.93 0)
+    (property "Footprint" "Diode_SMD:D_SOD-323" (at 142.24 74.93 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "~" (at 139.7 74.93 0)
+    (property "Datasheet" "~" (at 142.24 74.93 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 528b3e3b-d82d-4a40-bb5a-864c554754cc))
     (pin "2" (uuid 39bdb8bd-3aa7-4b27-a52f-6215315886ad))
     (instances
-      (project "v0"
+      (project "usbasploader"
         (path "/909d4d67-d92f-424c-bd51-265094cc6519"
           (reference "D4") (unit 1)
         )
@@ -1723,7 +1731,7 @@
     )
     (pin "1" (uuid 46250883-01fa-437f-8ce8-b7420ae07dbf))
     (instances
-      (project "v0"
+      (project "usbasploader"
         (path "/909d4d67-d92f-424c-bd51-265094cc6519"
           (reference "#PWR015") (unit 1)
         )
@@ -1748,7 +1756,7 @@
     )
     (pin "1" (uuid 6d7d5c70-e96a-4059-8f5b-665af7d3e8a7))
     (instances
-      (project "v0"
+      (project "usbasploader"
         (path "/909d4d67-d92f-424c-bd51-265094cc6519"
           (reference "#PWR08") (unit 1)
         )
@@ -1804,7 +1812,7 @@
     (pin "8" (uuid 44173bc8-80ed-4cc6-89bc-c74034653af3))
     (pin "9" (uuid 835f68d6-2827-4411-885a-d47bbc83b4cf))
     (instances
-      (project "v0"
+      (project "usbasploader"
         (path "/909d4d67-d92f-424c-bd51-265094cc6519"
           (reference "U1") (unit 1)
         )
@@ -1830,7 +1838,7 @@
     (pin "1" (uuid f8e532e5-2101-46a4-b29b-6239a2523d57))
     (pin "2" (uuid d6ed0b95-1011-46fe-8dd6-8e84ce77edc7))
     (instances
-      (project "v0"
+      (project "usbasploader"
         (path "/909d4d67-d92f-424c-bd51-265094cc6519"
           (reference "R3") (unit 1)
         )
@@ -1856,7 +1864,7 @@
     (pin "1" (uuid 6f5f2689-bab1-4080-b062-f00a2ede09e1))
     (pin "2" (uuid 0b241761-c52f-4722-bcdf-bc30fec78a4c))
     (instances
-      (project "v0"
+      (project "usbasploader"
         (path "/909d4d67-d92f-424c-bd51-265094cc6519"
           (reference "SW2") (unit 1)
         )
@@ -1882,7 +1890,7 @@
     (pin "1" (uuid 02ba17c2-6fb3-4dc5-a537-93174deb394c))
     (pin "2" (uuid 3ad8c99f-598b-47dd-a289-3d13d630e7a8))
     (instances
-      (project "v0"
+      (project "usbasploader"
         (path "/909d4d67-d92f-424c-bd51-265094cc6519"
           (reference "C1") (unit 1)
         )
@@ -1908,7 +1916,7 @@
     (pin "1" (uuid 3ec09f11-dc7a-485a-8137-b3743ff695f1))
     (pin "2" (uuid 372fc888-bcf0-4dd3-81cf-238775148286))
     (instances
-      (project "v0"
+      (project "usbasploader"
         (path "/909d4d67-d92f-424c-bd51-265094cc6519"
           (reference "D3") (unit 1)
         )
@@ -1934,7 +1942,7 @@
     (pin "1" (uuid 2aa4908b-3bff-46c0-8580-cf1b998f2a61))
     (pin "2" (uuid e3853faf-2865-408f-b06b-c7398047014d))
     (instances
-      (project "v0"
+      (project "usbasploader"
         (path "/909d4d67-d92f-424c-bd51-265094cc6519"
           (reference "R4") (unit 1)
         )
@@ -1942,25 +1950,25 @@
     )
   )
 
-  (symbol (lib_id "Device:R") (at 139.7 63.5 0) (mirror x) (unit 1)
+  (symbol (lib_id "Device:R") (at 142.24 63.5 0) (mirror x) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid b00e5c56-2ca3-496f-9fa4-d7b92cb17b55)
-    (property "Reference" "R5" (at 142.24 63.5 90)
+    (property "Reference" "R5" (at 144.78 63.5 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Value" "10K" (at 139.7 63.5 90)
+    (property "Value" "10K" (at 142.24 63.5 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" (at 137.922 63.5 90)
+    (property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" (at 140.462 63.5 90)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "~" (at 139.7 63.5 0)
+    (property "Datasheet" "~" (at 142.24 63.5 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid d41371ea-6276-4a97-b39d-62ab9ff55be7))
     (pin "2" (uuid 0db9b20c-763f-4e56-b089-2228b3e03299))
     (instances
-      (project "v0"
+      (project "usbasploader"
         (path "/909d4d67-d92f-424c-bd51-265094cc6519"
           (reference "R5") (unit 1)
         )
@@ -1985,7 +1993,7 @@
     )
     (pin "1" (uuid df42cf6f-8f00-4ad2-9bc7-6de470da411c))
     (instances
-      (project "v0"
+      (project "usbasploader"
         (path "/909d4d67-d92f-424c-bd51-265094cc6519"
           (reference "#PWR01") (unit 1)
         )
@@ -2010,7 +2018,7 @@
     )
     (pin "1" (uuid 618472ae-5006-43d2-892f-3c86657da401))
     (instances
-      (project "v0"
+      (project "usbasploader"
         (path "/909d4d67-d92f-424c-bd51-265094cc6519"
           (reference "#PWR010") (unit 1)
         )
@@ -2035,7 +2043,7 @@
     )
     (pin "1" (uuid 83f56a9d-fd00-4588-982a-d76eb0f7910d))
     (instances
-      (project "v0"
+      (project "usbasploader"
         (path "/909d4d67-d92f-424c-bd51-265094cc6519"
           (reference "#PWR07") (unit 1)
         )
@@ -2060,7 +2068,7 @@
     )
     (pin "1" (uuid 695b787b-8984-49b8-b747-eb0de53fedc5))
     (instances
-      (project "v0"
+      (project "usbasploader"
         (path "/909d4d67-d92f-424c-bd51-265094cc6519"
           (reference "#PWR04") (unit 1)
         )
@@ -2085,7 +2093,7 @@
     )
     (pin "1" (uuid 60e610b3-d48a-48fe-9383-d1ead6ae72f4))
     (instances
-      (project "v0"
+      (project "usbasploader"
         (path "/909d4d67-d92f-424c-bd51-265094cc6519"
           (reference "#PWR02") (unit 1)
         )
@@ -2110,7 +2118,7 @@
     )
     (pin "1" (uuid c887634c-0751-46c8-a242-470c49e09a66))
     (instances
-      (project "v0"
+      (project "usbasploader"
         (path "/909d4d67-d92f-424c-bd51-265094cc6519"
           (reference "#PWR013") (unit 1)
         )
@@ -2135,7 +2143,7 @@
     )
     (pin "1" (uuid e35b6244-4fd6-4b57-a231-1e9c184af50d))
     (instances
-      (project "v0"
+      (project "usbasploader"
         (path "/909d4d67-d92f-424c-bd51-265094cc6519"
           (reference "#PWR09") (unit 1)
         )
@@ -2161,7 +2169,7 @@
     (pin "1" (uuid db17d827-2bba-4b19-b286-1a8c7d3a2ac7))
     (pin "2" (uuid cdc04990-6fbd-4a73-b4f3-13e534e8974d))
     (instances
-      (project "v0"
+      (project "usbasploader"
         (path "/909d4d67-d92f-424c-bd51-265094cc6519"
           (reference "C2") (unit 1)
         )
@@ -2169,24 +2177,24 @@
     )
   )
 
-  (symbol (lib_id "power:GND") (at 139.7 78.74 0) (unit 1)
+  (symbol (lib_id "power:GND") (at 142.24 78.74 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid ed45d6bc-f903-4e18-868a-62d3798f0a1d)
-    (property "Reference" "#PWR016" (at 139.7 85.09 0)
+    (property "Reference" "#PWR016" (at 142.24 85.09 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Value" "GND" (at 139.7 83.82 0)
+    (property "Value" "GND" (at 142.24 83.82 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Footprint" "" (at 139.7 78.74 0)
+    (property "Footprint" "" (at 142.24 78.74 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "" (at 139.7 78.74 0)
+    (property "Datasheet" "" (at 142.24 78.74 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 588b3272-8d41-4fe7-8855-daf47ce914d3))
     (instances
-      (project "v0"
+      (project "usbasploader"
         (path "/909d4d67-d92f-424c-bd51-265094cc6519"
           (reference "#PWR016") (unit 1)
         )
@@ -2194,25 +2202,25 @@
     )
   )
 
-  (symbol (lib_id "Device:D_Zener") (at 143.51 74.93 90) (mirror x) (unit 1)
+  (symbol (lib_id "Device:D_Zener") (at 146.05 74.93 90) (mirror x) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid efc3c81d-6900-415d-bd07-b6a19f167090)
-    (property "Reference" "D5" (at 147.32 74.93 90)
+    (property "Reference" "D5" (at 149.86 74.93 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "3V3" (at 148.59 77.47 90)
+    (property "Value" "3V6" (at 151.13 77.47 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Diode_SMD:D_SOD-323" (at 143.51 74.93 0)
+    (property "Footprint" "Diode_SMD:D_SOD-323" (at 146.05 74.93 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "~" (at 143.51 74.93 0)
+    (property "Datasheet" "~" (at 146.05 74.93 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 7a4769ec-ef4e-4d57-bcdd-bc199f83248c))
     (pin "2" (uuid 5a89266f-3ef0-4281-8fc5-7767d9b042da))
     (instances
-      (project "v0"
+      (project "usbasploader"
         (path "/909d4d67-d92f-424c-bd51-265094cc6519"
           (reference "D5") (unit 1)
         )
@@ -2237,7 +2245,7 @@
     )
     (pin "1" (uuid 580d92f8-11cd-4863-b810-34df15edc28f))
     (instances
-      (project "v0"
+      (project "usbasploader"
         (path "/909d4d67-d92f-424c-bd51-265094cc6519"
           (reference "#PWR05") (unit 1)
         )
@@ -2262,7 +2270,7 @@
     )
     (pin "1" (uuid c93a2c41-411f-49d9-a347-2f0bef3d4aa9))
     (instances
-      (project "v0"
+      (project "usbasploader"
         (path "/909d4d67-d92f-424c-bd51-265094cc6519"
           (reference "#PWR020") (unit 1)
         )
@@ -2288,7 +2296,7 @@
     (pin "1" (uuid 8cbc4e5e-f9eb-4e66-9c04-e8b240fa5f14))
     (pin "2" (uuid 435c11fc-8d1b-41ca-9e0e-0a2fb7d98820))
     (instances
-      (project "v0"
+      (project "usbasploader"
         (path "/909d4d67-d92f-424c-bd51-265094cc6519"
           (reference "R2") (unit 1)
         )
