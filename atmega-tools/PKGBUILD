@@ -16,7 +16,7 @@ options=('!makeflags')
 build() {
 	cd "$srcdir/"
 
-	cd "../serialterm/qt/"
+	cd "../qtserterm/"
 	qmake
 	make all
 }
@@ -26,10 +26,9 @@ package() {
 	install -d $pkgdir/usr/bin/
 	install -d $pkgdir/usr/share/applications/
 
-	cd "../serialterm/qt/"
-	install -Dm755 qserialterm $pkgdir/usr/bin/qserialterm
-	install -Dm644 qtserialterminal.desktop \
-	$pkgdir/usr/share/applications/qtserialterminal.desktop
+	cd "../qtserterm/"
+	install -Dm755 qtserterm $pkgdir/usr/bin/qtserterm
+	install -Dm644 qtserterm.desktop $pkgdir/usr/share/applications/qtserterm.desktop
 
 	cd "../../avr-o-mat/"
 	install -d $pkgdir/usr/bin/
