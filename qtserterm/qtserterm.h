@@ -2,6 +2,7 @@
 #define QTSERTERM_H
 
 #include <QMainWindow>
+#include <QMessageBox>
 
 namespace Ui {
 class qtserterm;
