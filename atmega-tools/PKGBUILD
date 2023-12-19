@@ -9,7 +9,8 @@ depends=('java-runtime' 'tk' 'qt5-base' 'qt5-serialport')
 optdepends=('avr-gcc: AVR compiler'
 		'avr-libc: AVR C library'
 		'avrdude: AVR Programmer'
-		'atmega-demos: ATMega demos')
+		'atmega-demos: ATMega demos'
+		'serialplot: Serial plot from Qt Serial Terminal')
 makedepends=('git')
 options=('!makeflags')
 
@@ -19,6 +20,7 @@ build() {
 	cd "../qtserterm/"
 	qmake
 	make all
+	make clean
 }
 
 package() {
@@ -27,10 +29,10 @@ package() {
 	install -d $pkgdir/usr/share/applications/
 
 	cd "../qtserterm/"
-	install -Dm755 qtserterm $pkgdir/usr/bin/qtserterm
-	install -Dm644 qtserterm.desktop $pkgdir/usr/share/applications/qtserterm.desktop
+	mv -f qtserterm $pkgdir/usr/bin/qtserterm
+	cp -f qtserterm.desktop $pkgdir/usr/share/applications/
 
-	cd "../../avr-o-mat/"
+	cd "../avr-o-mat/"
 	install -d $pkgdir/usr/bin/
 	cp -rf share $pkgdir/usr/
 	install -Dm755 bin/avr-burn $pkgdir/usr/bin/avr-burn

@@ -6,6 +6,7 @@
 #include <QSerialPort>
 #include <QSerialPortInfo>
 #include <QFileDialog>
+#include <QTextStream>
 #include <QProcess>
 #include <QTimer>
 #include <QTime>

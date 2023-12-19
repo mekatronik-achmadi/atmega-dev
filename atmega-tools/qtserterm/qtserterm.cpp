@@ -242,10 +242,10 @@ void qtserterm::on_btnFilePath_clicked()
 void qtserterm::on_btnFileSave_clicked()
 {
     QFile dumpText(dumpFile);
-    dumpText.open(QIODevice::WriteOnly | QIODevice::Text);
+    dumpText.open(QIODevice::WriteOnly | QFile::Truncate | QIODevice::Text);
 
-    QTextStream txtOut(&dumpText);
-    txtOut << ui->txtSerTerm->toPlainText() << "\r\n";
+    QTextStream out(&dumpText);
+    out << ui->txtSerTerm->toPlainText() << "\r\n";
 
     dumpText.flush();
     dumpText.close();
@@ -274,13 +274,14 @@ void qtserterm::on_btnAutoStart_clicked()
 
 void qtserterm::on_actionPlotter_triggered()
 {
+    QStringList appargs = {""};
     port_close();
 
     if(QFile::exists("/bin/serialplot")){
-        QProcess::startDetached("/bin/serialplot");
+        QProcess::startDetached("/bin/serialplot",appargs);
     }
     else if(QFile::exists("/usr/bin/serialplot")){
-        QProcess::startDetached("/usr/bin/serialplot");
+        QProcess::startDetached("/usr/bin/serialplot",appargs);
     }
     else{
         ui->sttbar->showMessage("No Serial Plot program found");
