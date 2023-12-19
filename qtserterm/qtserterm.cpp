@@ -19,6 +19,10 @@ qtserterm::qtserterm(QWidget *parent):
 
     isLocalEcho = false;
     isShowEnd = false;
+    endLine = "";
+
+    tmrReq = new QTimer(this);
+    connect(tmrReq,SIGNAL(timeout()),this,SLOT(request_data()));
 }
 
 qtserterm::~qtserterm()
@@ -30,6 +34,14 @@ void qtserterm::app_exit()
 {
     port_close();
     QApplication::quit();
+}
+
+void qtserterm::app_delay(int millisecondsToWait)
+{
+    QTime dieTime = QTime::currentTime().addMSecs(millisecondsToWait);
+    while (QTime::currentTime()<dieTime) {
+        QCoreApplication::processEvents(QEventLoop::AllEvents,100);
+    };
 }
 
 void qtserterm::port_scan()
@@ -157,6 +169,20 @@ bool qtserterm::eventFilter(QObject *obj, QEvent *event)
     }
 }
 
+void qtserterm::request_data()
+{
+    if(!serport->isOpen()) return;
+
+    QString reqString = ui->txtDataSend->text();
+    reqString += endLine;
+
+    QByteArray reqBytes = reqString.toUtf8();
+    serport->write(reqBytes);
+
+    int finishWait = ui->txtSendWait->text().toInt();
+    if(finishWait>0) app_delay(finishWait);
+}
+
 void qtserterm::on_actionExit_triggered()
 {
     app_exit();
@@ -195,6 +221,52 @@ void qtserterm::on_btnPortOpen_clicked()
     }
 }
 
+void qtserterm::on_btnClear_clicked()
+{
+    ui->txtSerTerm->clear();
+}
+
+void qtserterm::on_btnStringSend_clicked()
+{
+    request_data();
+}
+
+void qtserterm::on_btnAutoStart_clicked()
+{
+    int intervalReq = ui->txtInterval->text().toInt();
+
+    if(intervalReq<10){
+        ui->sttbar->showMessage("Interval must be 10ms or more");
+        return;
+    }
+
+    if(tmrReq->isActive()){
+        tmrReq->stop();
+        ui->btnAutoStart->setText("Auto Send Start");
+        ui->sttbar->showMessage("Auto Send Stopped");
+    }
+    else{
+        tmrReq->start(intervalReq);
+        ui->btnAutoStart->setText("Auto Send Stop");
+        ui->sttbar->showMessage("Auto Send Started");
+    }
+}
+
+void qtserterm::on_actionPlotter_triggered()
+{
+    port_close();
+
+    if(QFile::exists("/bin/serialplot")){
+        QProcess::startDetached("/bin/serialplot");
+    }
+    else if(QFile::exists("/usr/bin/serialplot")){
+        QProcess::startDetached("/usr/bin/serialplot");
+    }
+    else{
+        ui->sttbar->showMessage("No Serial Plot program found");
+    }
+}
+
 void qtserterm::on_cmbPort_currentIndexChanged()
 {
     port_set();
@@ -215,6 +287,17 @@ void qtserterm::on_cmbShowEnd_currentIndexChanged(){
     }
     else{
         isShowEnd = true;
+    }
+}
+
+void qtserterm::on_cmbLineEnd_currentIndexChanged(){
+    int idx = ui->cmbLineEnd->currentIndex();
+
+    switch(idx) {
+        case 0: endLine = "";break;
+        case 1: endLine = "\r";break;
+        case 2: endLine = "\n";break;
+        case 3: endLine = "\r\n";break;
     }
 }
 
