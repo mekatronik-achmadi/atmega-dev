@@ -4,5 +4,5 @@ moc_*
 ui_*
 *.o
 Makefile
-qserialterm
+qtserterm
 .cache/
