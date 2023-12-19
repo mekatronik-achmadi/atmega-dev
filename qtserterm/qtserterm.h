@@ -5,6 +5,7 @@
 #include <QMessageBox>
 #include <QSerialPort>
 #include <QSerialPortInfo>
+#include <QFileDialog>
 #include <QProcess>
 #include <QTimer>
 #include <QTime>
@@ -25,6 +26,7 @@ private:
     bool isShowEnd;
     QString endLine;
     QTimer* tmrReq;
+    QString dumpFile;
 
 private slots:
     void app_exit();
@@ -42,12 +44,15 @@ private slots:
     void on_actionAbout_triggered();
     void on_actionAboutQt_triggered();
     void on_actionPlotter_triggered();
+    void on_actionPortInfo_triggered();
 
     void on_btnPortScan_clicked();
     void on_btnPortOpen_clicked();
     void on_btnClear_clicked();
     void on_btnStringSend_clicked();
     void on_btnAutoStart_clicked();
+    void on_btnFilePath_clicked();
+    void on_btnFileSave_clicked();
 
     void on_cmbPort_currentIndexChanged();
     void on_cmbLocalEcho_currentIndexChanged();

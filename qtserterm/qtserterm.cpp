@@ -231,6 +231,26 @@ void qtserterm::on_btnStringSend_clicked()
     request_data();
 }
 
+void qtserterm::on_btnFilePath_clicked()
+{
+    dumpFile = QFileDialog::getSaveFileName(this,"Dump File Path","dumpfile.txt","text (*.txt)");
+
+    if(dumpFile.isEmpty()) return;
+    ui->txtFilePath->setText(dumpFile);
+}
+
+void qtserterm::on_btnFileSave_clicked()
+{
+    QFile dumpText(dumpFile);
+    dumpText.open(QIODevice::WriteOnly | QIODevice::Text);
+
+    QTextStream txtOut(&dumpText);
+    txtOut << ui->txtSerTerm->toPlainText() << "\r\n";
+
+    dumpText.flush();
+    dumpText.close();
+}
+
 void qtserterm::on_btnAutoStart_clicked()
 {
     int intervalReq = ui->txtInterval->text().toInt();
@@ -265,6 +285,35 @@ void qtserterm::on_actionPlotter_triggered()
     else{
         ui->sttbar->showMessage("No Serial Plot program found");
     }
+}
+
+void qtserterm::on_actionPortInfo_triggered()
+{
+    QString strInfo = "";
+
+    const auto serialPortInfos = QSerialPortInfo::availablePorts();
+
+    for(const QSerialPortInfo &portInfo : serialPortInfos){
+        strInfo += "\n";
+        strInfo +=  "Port\t: " + portInfo.portName() + "\n";
+        strInfo +=  "Location\t: " + portInfo.systemLocation() + "\n";
+        strInfo +=  "Description\t: " + portInfo.description() + "\n";
+        strInfo +=  "Vendor ID\t: ";
+        strInfo +=  (portInfo.hasVendorIdentifier()
+         ? QByteArray::number(portInfo.vendorIdentifier(), 16)
+         : QByteArray()) + "\n";
+        strInfo +=  "Product ID\t: ";
+        strInfo +=  (portInfo.hasProductIdentifier()
+         ? QByteArray::number(portInfo.productIdentifier(), 16)
+         : QByteArray());
+
+        strInfo += "\n\n";
+    }
+
+    QMessageBox::information(this,
+            "Serial Port Info",
+            strInfo,
+            QMessageBox::Ok);
 }
 
 void qtserterm::on_cmbPort_currentIndexChanged()

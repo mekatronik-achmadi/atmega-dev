@@ -3,6 +3,7 @@ compile_commands.json
 moc_*
 ui_*
 *.o
+*.txt
 Makefile
 qtserterm
 .cache/

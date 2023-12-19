@@ -507,6 +507,7 @@
     <property name="title">
      <string>File</string>
     </property>
+    <addaction name="actionPortInfo"/>
     <addaction name="actionPlotter"/>
     <addaction name="separator"/>
     <addaction name="actionQuit"/>
@@ -557,6 +558,14 @@
    </property>
    <property name="text">
     <string>Open Plotter</string>
+   </property>
+  </action>
+  <action name="actionPortInfo">
+   <property name="icon">
+    <iconset theme="system-devices-panel-informations"/>
+   </property>
+   <property name="text">
+    <string>Port Info</string>
    </property>
   </action>
  </widget>
