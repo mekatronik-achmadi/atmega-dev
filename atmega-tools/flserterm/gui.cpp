@@ -8,15 +8,26 @@ Gui::Gui() {
     txtSend = new Fl_Input(185,10,190,20);
     txtPort = new Fl_Input(185,35,190,20);
     txtOutput = new Fl_Text_Display(5, 65,370,400);
-    txtStatus = new Fl_Text_Display(5,475,370,20);
+    statusBar = new Fl_Box(5,475,370,20);
 
-    txtBaud->insert("9600");
-    txtSend->insert("test");
+    bufOutput = new Fl_Text_Buffer();
+
+    txtBaud->insert("9600",0);
     txtPort->insert("/dev/ttyUSB0");
 
-    mainWnd->end();
+    txtOutput->buffer(bufOutput);
+    bufOutput->text("Received Data");
+
+    statusBar->align(FL_ALIGN_LEFT|FL_ALIGN_INSIDE);
+    status("Ready");
 
     Fl::scheme("none");
+    mainWnd->end();
+}
+
+void Gui::status(std::string msg){
+    statusBar->copy_label(msg.c_str());
+    statusBar->redraw();
 }
 
 void Gui::show(int argc, char* argv[]){
@@ -26,3 +37,4 @@ void Gui::show(int argc, char* argv[]){
 void Gui::close(){
     mainWnd->hide();
 }
+
