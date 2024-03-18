@@ -5,7 +5,10 @@ pkgdesc="Some tools for developing ATMega chips applications"
 arch=('i686' 'x86_64')
 url="https://github.com/mekatronik-achmadi/atmega-dev"
 license=('GPL')
-depends=('java-runtime' 'tk' 'qt5-base' 'qt5-serialport')
+depends=(
+'java-runtime' 'tk'
+'qt5-base' 'qt5-serialport'
+'wxwidgets-gtk3')
 optdepends=('avr-gcc: AVR compiler'
 		'avr-libc: AVR C library'
 		'avrdude: AVR Programmer'
@@ -17,6 +20,10 @@ options=('!makeflags')
 build() {
 	cd "$srcdir/"
 
+	cd "../wxserterm"
+	cmake -B build
+	cmake --build build
+
 	cd "../qtserterm/"
 	qmake
 	make all
@@ -27,6 +34,10 @@ package() {
 	cd "$srcdir/"
 	install -d $pkgdir/usr/bin/
 	install -d $pkgdir/usr/share/applications/
+
+	cd "../wxserterm"
+    mv -f build/wxserterm $pkgdir/usr/bin/wxserterm
+    cp -f wxserterm.desktop $pkgdir/usr/share/applications/
 
 	cd "../qtserterm/"
 	mv -f qtserterm $pkgdir/usr/bin/qtserterm
