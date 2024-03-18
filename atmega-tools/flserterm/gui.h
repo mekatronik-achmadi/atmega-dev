@@ -10,7 +10,8 @@
 #include <FL/Fl_Box.H>
 #include <FL/Fl_Text_Display.H>
 #include <FL/Fl_Text_Buffer.H>
-#include <FL/fl_ask.H>
+
+#include "ceSerial.h"
 
 class Gui
 {
@@ -30,9 +31,13 @@ public:
 
     Fl_Box *statusBar;
 
+    ceSerial *comPort;
+    bool sttOpen;
+
     void show(int argc, char* argv[]);
     void close(void);
     void status(std::string msg);
+    void portOpen(void);
 };
 
 #endif
