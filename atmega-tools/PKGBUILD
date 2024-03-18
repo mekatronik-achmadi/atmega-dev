@@ -36,7 +36,8 @@ package() {
 	install -d $pkgdir/usr/share/applications/
 
 	cd "../wxserterm"
-    mv -f build/wxserterm $pkgdir/usr/bin/wxserterm
+    cp -f build/wxserterm $pkgdir/usr/bin/wxserterm
+    rm -rf build/
     cp -f wxserterm.desktop $pkgdir/usr/share/applications/
 
 	cd "../qtserterm/"

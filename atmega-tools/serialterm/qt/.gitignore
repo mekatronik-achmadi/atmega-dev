@@ -1,8 +1,0 @@
-.qmake.stash
-compile_commands.json
-moc_*
-ui_*
-*.o
-Makefile
-qserialterm
-.cache/
