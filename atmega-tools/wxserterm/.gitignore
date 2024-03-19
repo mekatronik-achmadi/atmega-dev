@@ -1,5 +1,6 @@
 *.o
 *.plist
 .cache/
+build/
 wxserterm
 compile_commands.json

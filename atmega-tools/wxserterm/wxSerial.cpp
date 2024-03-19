@@ -27,8 +27,8 @@ public:
     wxButton* btnSend;
     wxButton* btnOpen;
     wxTextCtrl* txtSend;
-    wxTextCtrl* txtSelPort;
-    wxTextCtrl* txtSetBaud;
+    wxTextCtrl* txtPort;
+    wxComboBox* cmbBaud;
     wxTimer m_timer;
     wxTextCtrl* txtRx;
     ceSerial comport;
@@ -102,9 +102,15 @@ MyFrame::MyFrame(const wxString &title)
     btnOpen = new wxButton(this,Button_Open,wxT("&Open"),wxPoint(5,5),wxSize(75,25));
     btnSend = new wxButton(this,Button_Send,wxT("&Send"),wxPoint(85, 5),wxSize(75, 25));
     txtSend = new wxTextCtrl(this,Txt_Send,wxT("help"),wxPoint(165,5),wxSize(215,25));
-    txtSetBaud = new wxTextCtrl(this,Serial_Baud,wxT("9600"),wxPoint(5,35),wxSize(155,25));
-    txtSelPort = new wxTextCtrl(this,Serial_Port,wxT("/dev/ttyUSB0"),wxPoint(165,35),wxSize(215,25));
+    cmbBaud = new wxComboBox(this,Serial_Baud,wxT("9600"),wxPoint(5,35),wxSize(155,25));
+    txtPort = new wxTextCtrl(this,Serial_Port,wxT("/dev/ttyUSB0"),wxPoint(165,35),wxSize(215,25));
     txtRx = new wxTextCtrl(this, Txt_Rx, wxT(""), wxPoint(5, 65), wxSize(375, 360), wxTE_MULTILINE | wxTE_READONLY);
+
+    cmbBaud->Append(wxT("9600"));
+    cmbBaud->Append(wxT("38400"));
+    cmbBaud->Append(wxT("57600"));
+    cmbBaud->Append(wxT("74880"));
+    cmbBaud->Append(wxT("115200"));
 
     Connect(Minimal_Quit,wxEVT_COMMAND_MENU_SELECTED,wxCommandEventHandler(MyFrame::OnQuit));
     Connect(Minimal_About,wxEVT_COMMAND_MENU_SELECTED,wxCommandEventHandler(MyFrame::OnAbout));
@@ -174,7 +180,7 @@ void MyFrame::SelPort(void){
         txtRx->AppendText(wxString::Format(wxT("Close Port %s first.\n"), comport.GetPort()));
     }
     else {
-        wxString device = txtSelPort->GetValue();
+        wxString device = txtPort->GetValue();
         std::string str = device.Trim().ToStdString();
         if (str.length() > 0) {
 #ifdef ceWINDOWS
@@ -192,7 +198,7 @@ void MyFrame::SetBaud(void){
         txtRx->AppendText(wxString::Format(wxT("Close port %s first.\n"), comport.GetPort()));
     }
     else {
-        wxString baud = txtSetBaud->GetValue();
+        wxString baud = cmbBaud->GetValue();
         long n = wxAtol(baud.Trim());
         if (n >= 0) {
             comport.SetBaudRate(n);
