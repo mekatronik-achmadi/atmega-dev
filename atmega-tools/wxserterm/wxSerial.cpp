@@ -44,6 +44,7 @@ public:
     void OnTimer(wxTimerEvent& event);
     void ProcessChar(char ch);
     void ClearText(wxCommandEvent& event);
+    void SaveText(wxCommandEvent& event);
 };
 
 const int ID_BTNSEND = 101;
@@ -52,7 +53,9 @@ const int ID_TXTSEND = 103;
 const int ID_BAUDRATE = 104;
 const int ID_TIMER = 105;
 const int ID_TXTRX = 106;
-const int ID_SELPORT = 107;
+const int ID_TXTCLR = 107;
+const int ID_TXTSAV = 108;
+const int ID_SELPORT = 109;
 
 enum {
     Button_Send = ID_BTNSEND,
@@ -62,7 +65,8 @@ enum {
     Tmr_Data = ID_TIMER,
     Txt_Rx =ID_TXTRX,
     Serial_Port = ID_SELPORT,
-    Txt_Clear = wxID_CLEAR,
+    Txt_Clear = ID_TXTCLR,
+    Txt_Save = ID_TXTSAV,
     Minimal_Quit = wxID_EXIT,
     Minimal_About = wxID_ABOUT
 };
@@ -79,7 +83,7 @@ bool MyApp::OnInit(){
 }
 
 MyFrame::MyFrame(const wxString &title)
-    :wxFrame(NULL, wxID_ANY, title,wxDefaultPosition,wxSize(390, 500), wxDEFAULT_FRAME_STYLE ^ wxRESIZE_BORDER),m_timer(this, ID_TIMER)
+    :wxFrame(NULL, wxID_ANY, title,wxDefaultPosition,wxSize(370, 600), wxDEFAULT_FRAME_STYLE ^ wxRESIZE_BORDER),m_timer(this, ID_TIMER)
 {
     wxMenu *fileMenu = new wxMenu;
     wxMenu *editMenu = new wxMenu;
@@ -87,6 +91,7 @@ MyFrame::MyFrame(const wxString &title)
 
     fileMenu->Append(Minimal_Quit,wxT("&Quit"),wxT("Quit Program"));
     editMenu->Append(Txt_Clear,wxT("C&lear"),wxT("Clear Console Text"));
+    editMenu->Append(Txt_Save,wxT("&Save"),wxT("Save Console Text"));
     helpMenu->Append(Minimal_About,wxT("&About"),wxT("Show about Message"));
 
     wxMenuBar *menuBar = new wxMenuBar();
@@ -101,10 +106,10 @@ MyFrame::MyFrame(const wxString &title)
 
     btnOpen = new wxButton(this,Button_Open,wxT("&Open"),wxPoint(5,5),wxSize(75,25));
     btnSend = new wxButton(this,Button_Send,wxT("&Send"),wxPoint(85, 5),wxSize(75, 25));
-    txtSend = new wxTextCtrl(this,Txt_Send,wxT("help"),wxPoint(165,5),wxSize(215,25));
+    txtSend = new wxTextCtrl(this,Txt_Send,wxT("help"),wxPoint(165,5),wxSize(195,25));
     cmbBaud = new wxComboBox(this,Serial_Baud,wxT("9600"),wxPoint(5,35),wxSize(155,25));
-    txtPort = new wxTextCtrl(this,Serial_Port,wxT("/dev/ttyUSB0"),wxPoint(165,35),wxSize(215,25));
-    txtRx = new wxTextCtrl(this, Txt_Rx, wxT(""), wxPoint(5, 65), wxSize(375, 360), wxTE_MULTILINE | wxTE_READONLY);
+    txtPort = new wxTextCtrl(this,Serial_Port,wxT("/dev/ttyUSB0"),wxPoint(165,35),wxSize(195,25));
+    txtRx = new wxTextCtrl(this, Txt_Rx, wxT(""), wxPoint(5, 65), wxSize(355, 460), wxTE_MULTILINE | wxTE_READONLY);
 
     cmbBaud->Append(wxT("9600"));
     cmbBaud->Append(wxT("38400"));
@@ -116,6 +121,7 @@ MyFrame::MyFrame(const wxString &title)
     Connect(Minimal_About,wxEVT_COMMAND_MENU_SELECTED,wxCommandEventHandler(MyFrame::OnAbout));
 
     Connect(Txt_Clear, wxEVT_COMMAND_MENU_SELECTED,wxCommandEventHandler(MyFrame::ClearText));
+    Connect(Txt_Save,wxEVT_COMMAND_MENU_SELECTED,wxCommandEventHandler(MyFrame::SaveText));
     Connect(Button_Open, wxEVT_COMMAND_BUTTON_CLICKED,wxCommandEventHandler(MyFrame::OnBtnOpen));
     Connect(Button_Send, wxEVT_COMMAND_BUTTON_CLICKED,wxCommandEventHandler(MyFrame::OnSend));
     Connect(Tmr_Data,wxEVT_TIMER,wxTimerEventHandler(MyFrame::OnTimer));
@@ -209,6 +215,14 @@ void MyFrame::SetBaud(void){
 
 void MyFrame::ClearText(wxCommandEvent& WXUNUSED(event)){
     txtRx->Clear();
+}
+
+void MyFrame::SaveText(wxCommandEvent& WXUNUSED(event)){
+    wxFileDialog savDlg(this,wxT("Save Serial Log"),"","","*.txt",wxFD_SAVE);
+
+    if(savDlg.ShowModal()==wxID_OK){
+        txtRx->SaveFile(wxString::Format("%s.txt",savDlg.GetPath()));
+    }
 }
 
 void MyFrame::OnSend(wxCommandEvent& WXUNUSED(event)){
